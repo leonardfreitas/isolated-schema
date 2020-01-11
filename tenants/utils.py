@@ -1,4 +1,17 @@
 from django.db import connection
+from django.conf import settings
+
+
+def get_public_schema_name():
+    return getattr(settings, 'PUBLIC_SCHEMA_NAME', 'public')
+
+
+def get_shared_apps():
+    return getattr(settings, 'SHARED_APPS')
+
+
+def get_installed_apps():
+    return getattr(settings, 'INSTALLED_APPS')
 
 
 def hostname_from_request(request):

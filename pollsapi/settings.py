@@ -36,6 +36,13 @@ REST_FRAMEWORK = {
 }
 # Application definition
 
+SHARED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.sessions",
+    "django.contrib.staticfiles",
+]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -88,8 +95,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "polls",
-        "USER": "postgres",
-        "PASSWORD": "123",
+        "USER": "lebaliro",
+        "PASSWORD": "r8mb8",
+        "HOST": "localhost",
     }
 }
 
