@@ -7,7 +7,6 @@ from ...utils import get_tenants_map, get_public_schema_name, get_shared_apps
 class Command(MigrationCommand):
     def handle(self, *args, **options):
         with connection.cursor() as cursor:
-            print(options)
             options['public'] = False
             schemas = get_tenants_map().values()
             for schema in schemas:
